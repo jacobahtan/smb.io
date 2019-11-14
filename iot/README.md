@@ -1,4 +1,7 @@
 # An IoT SAP Fiori App that connects to CC2650STK Sensor Tag
+An IoT app that uses bluetooth (BLE) to connect the SensorTag and stream sensor data (Accelerometer, Luxometer, Humidity & Temperature).
+With the sensor data, you can configure your ERP system (SAP Business One / SAP Business ByDesign) to get triggers.
+
 In this solution, you will be guided on how to deploy it into your device (iOS / Android).
 We will be using Cordova to package this web application and build it for mobile device.
 What you need is a mobile device and a SensorTag.
@@ -6,16 +9,16 @@ Optionally, you may acquire SAP's IoT platform (SAP Leonardo IoT 4.0), so to col
 If not, the sensor data will just be streaming to your mobile device
 
 ## Requirements
-Hardware: CC2650STK SensorTag.
-iOS or Android Mobile Device with Bluetooth.
-Internet Connection on your mobile device.
+- Hardware: CC2650STK SensorTag.
+- iOS or Android Mobile Device with Bluetooth.
+- Internet Connection on your mobile device.
 
 ## Overview
 xxx
 
 ## Prerequisite
-Install cordova
-Install XCode or/and Android Studio (depends on your mobile device)
+- Install cordova
+- Install XCode or/and Android Studio (depends on your mobile device)
 
 ## How to use this?
 This is a SAPUI5 app that is wrapped in a Hybrid mobile application through cordova packaging tool.
@@ -29,7 +32,8 @@ cordova create <folder-name> <namespace-identifier-of-your-app> <app-name-or-pro
 ```sh
 $ cordova create smbhybridapphelloworld sap.smbhybridapphelloworld SMBHybridAppHelloWorld
 ```
-
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-1.png)
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-2.png)
 3. Copy & paste the contents in the web app package into the cordova folder.
 4. Download the plugins.
 5. Run Cordova commands to add device.
