@@ -2,23 +2,16 @@
 An IoT app that uses bluetooth (BLE) to connect the SensorTag and stream sensor data (Accelerometer, Luxometer, Humidity & Temperature).
 With the sensor data, you can configure your ERP system (SAP Business One / SAP Business ByDesign) to get triggers.
 
-In this solution, you will be guided on how to deploy it into your device (iOS / Android).
+In this solution, you will be guided on how to deploy it in your device (iOS / Android).
 We will be using Cordova to package this web application and build it for mobile device.
 What you need is a mobile device and a SensorTag.
 Optionally, you may acquire SAP's IoT platform (SAP Leonardo IoT 4.0), so to collect the IoT Sensor Data.
 If not, the sensor data will just be streaming to your mobile device
 
-## Requirements
-- Hardware: CC2650STK SensorTag.
-- iOS or Android Mobile Device with Bluetooth.
-- Internet Connection on your mobile device.
-
-## Overview
-xxx
-
 ## Prerequisite
-- Install cordova
-- Install Xcode or/and Android Studio (depends on your mobile device)
+- Hardware: CC2650STK SensorTag
+- Install [Cordova](https://cordova.apache.org/docs/en/latest/guide/cli/#installing-the-cordova-cli)
+- Install [Xcode](https://developer.apple.com/xcode/) or/and [Android Studio](https://developer.android.com/studio)
 
 ## How to use this?
 This is a SAPUI5 app that is wrapped in a Hybrid mobile application through cordova packaging tool.
@@ -26,7 +19,7 @@ It is using your mobile bluetooth (BLE Technology) to connect to the sensortag a
 From the mobile phone, you have the option to configure an IoT platform (SAP Cloud Platform IoT 2.0 / Leonardo 4.0) to stream IoT data.
 
 Make sure you have completed the prerequisite before applying the following steps.
-1. Git clone or download the contents in this page's folder (/smb.io/iot).
+1. Download the contents in this page's folder (/smb.io/iot).
 
 2. Prepare a cordova package to your own namespace identifier using terminal / command prompt.
 > Syntax as follows:
@@ -54,21 +47,21 @@ $ cordova platform add android
 ```
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-4.png)
 
-6. Open your project in either OS dependent IDE.<br>
-For iOS, open the .xcodeproj extension in the ios folder.
-![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
-
-For Android, Open Android Studio, Open Existing Android Project, Select the android folder.
-![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
-
+6. Open your project in either OS dependent IDE.
+<br>For iOS, open the .xcodeproj extension in the ios folder.
+<br>![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
+<br>
+<br>For Android, Open Android Studio, Open Existing Android Project, Select the android folder.
+<br>![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
+<br>
 7. Run the project in the IDE.
-
-## References
 
 # Change Log
 11.19 - Distribution version of SMB.io on IoT solution.
 
 # License
+This repository is released under the terms of the MIT license. 
+<br>See [LICENSE](https://github.com/jacobtan89/smb.io/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
 
 ## Author
 * [Tan, Jacob](https://github.com/jacobtan89)
