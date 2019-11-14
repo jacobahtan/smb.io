@@ -48,12 +48,12 @@ $ cordova platform add android
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-4.png)
 
 6. Open the iOS / Android project.
-<br>For iOS, open the .xcodeproj extension in the ios folder.
+<br>For iOS, open the .xcodeproj extension in the ios folder.</br>
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
-<br>
-<br>For Android, Open Android Studio, Open Existing Android Project, Select the android folder.
+<br></br>
+<br>For Android, Open Android Studio, Open Existing Android Project, Select the android folder.</br>
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
-<br>
+<br></br>
 7. Run the project in the IDE.
 
 # Change Log
