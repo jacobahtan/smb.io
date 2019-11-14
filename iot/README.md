@@ -29,8 +29,8 @@ Make sure you have completed the prerequisite before applying the following step
 1. Git clone or download the contents in this page's folder (/smb.io/iot).
 
 2. Prepare a cordova package to your own namespace identifier using terminal / command prompt.
+> Syntax as follows:
 ```sh
-Syntax as follows:
 cordova create <folder-name> <namespace-identifier-of-your-app> <app-name-or-project-name>
 ```
 ```sh
@@ -54,14 +54,14 @@ $ cordova platform add android
 ```
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-4.png)
 
-6. Open your project in either OS dependent IDE.
+6. Open your project in either OS dependent IDE.<br>
 For iOS, open the .xcodeproj extension in the ios folder.
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
 
 For Android, Open Android Studio, Open Existing Android Project, Select the android folder.
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
 
-7. Run the project.
+7. Run the project in the IDE.
 
 ## References
 
