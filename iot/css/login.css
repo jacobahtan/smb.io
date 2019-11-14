@@ -1,0 +1,343 @@
+.sizeSensorLoad {
+	font-size : 1rem;
+}
+.size1 {
+	font-size : 1.5rem;
+}
+.size2 {
+	font-size : 2.5rem;
+}
+.size3 {
+	font-size : 5rem;
+}
+.size4 {
+	font-size : 7.5rem;
+}
+.size5 {
+	font-size : 10rem;
+}
+
+@media (max-width:599px) {
+	.size1 {
+		font-size : 1.2rem;
+	}
+	.size2 {
+		font-size : 2rem;
+	}
+	.size3 {
+		font-size : 3rem;
+	}
+	.size4 {
+		font-size : 4rem;
+	}
+	.size5 {
+		font-size : 5rem;
+	}
+}
+
+.sapUiSraBrandingBar {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 0.25rem;
+    z-index: 99;
+}
+
+@media only screen and (max-width: 1200px) {
+    .sapUiSraBrandingBar {
+        left: 0rem;
+        right: 0rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .sapUiSraBrandingBar {
+        left: 0rem;
+        right: 0rem;
+    }
+}
+.header_login_box {
+    padding: 1% 37% 1rem 37%;
+}
+
+.header_login_boxx {
+    padding: 0% 1% 1% 35%;
+    transition: padding 1s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header_login_box {
+        padding: 5% 27% 1rem 27%;
+        transition: padding 1s;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .header_login_box {
+        padding: 5% 10% 1rem 10%;
+        transition: padding 1s;
+    }
+}
+.login_box {
+    padding: 1% 37% 2rem 37%;
+}
+@media only screen and (max-width: 1200px) {
+    .login_box {
+        padding: 1% 27% 2rem 27%;
+        transition: padding 1s;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .login_box {
+        padding: 1% 10% 2rem 10%;
+        transition: padding 1s;
+    }
+}
+.login_pwdchange_box {
+    padding: 10% 37% 5% 37%;
+}
+@media only screen and (max-width: 1200px) {
+    .login_pwdchange_box {
+        padding: 10% 27% 5% 27%;
+        transition: padding 1s;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .login_pwdchange_box {
+        padding: 10% 15% 5% 15%;
+        transition: padding 1s;
+    }
+}
+.login_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    font-weight: normal !important;
+}
+.login_subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+@media only screen and (max-width: 800px) {
+    .login_subtitle {
+        padding-bottom: 1rem;
+    }
+}
+.login_username {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 2rem;
+}
+.login_password {
+    padding: 10% 15% 5% 15%;
+    font-family: Calibri;
+}
+.login_links_box {
+    padding: 0em 37% 0em 37%;
+}
+@media only screen and (max-width: 1200px) {
+    .login_links_box {
+        padding: 0em 27% 0em 27%;
+        transition: padding 1s;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .login_links_box {
+        padding: 0em 15% 0em 15%;
+        transition: padding 1s;
+    }
+}
+.login_forgotpassword_link {
+    padding-bottom: 1em;
+}
+.login_error {
+    font-family: Calibri;
+    font-size: 1.2em;
+    padding-bottom: 2rem;
+}
+.sapUiSraFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    z-index: 99;
+}
+.sapUiSraLoginLogo {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    height: 2rem;
+}
+.sapUiSraLoginCopyright {
+    position: absolute;
+    bottom: 0.5rem;
+    right: -1rem;
+    max-width: 150px;
+}
+
+.sapUiSraLoginCopyrightImage {
+	height: 5%;
+	width: 73%;
+}
+@media only screen and (max-width: 1200px) {
+    /* .sapUiSraLoginCopyright {
+        max-width: 300px;
+    } */
+}
+@media only screen and (max-width: 800px) {
+    /* .sapUiSraLoginCopyright {
+        max-width: 150px;
+    } */
+}
+@media only screen and (max-width: 500px) and (max-height: 500px) {
+    .login_box {
+        padding: 30% 15% 2rem 15%;
+        transition: padding 1s;
+    }
+    /* .sapUiSraFooter {
+        background-color: white;
+    }*/
+    /* .sapUiSraLoginCopyright {
+        max-width: 100px;
+    }  */
+    /*.login_subtitle {
+        padding-bottom: 1em;
+    }
+    .login_title {
+        padding-top: 0.3em;
+    }*/
+}
+div.sapMBtnInner.sapMBtnEmphasized {
+    background-color: #017fb5;
+    border-color: #017fb5;
+}
+
+.giveMeScrollBar{
+	overflow-y:auto;
+}
+
+
+body {
+
+    };
+   
+    #splash-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y:auto;
+      background-color: #e7e7e7 !important;
+      background-size: 100% !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
+    #splash-screen > * {
+      /* center child divs  */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* x-border-box */
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      /* x-unselectable */
+      user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: -moz-none;
+      -webkit-user-select: none;
+      cursor: default;
+    }
+    .splash-screen-circle-outer {
+      z-index: 20000;
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      margin-top: -50px;
+      margin-left: -50px;
+      border: 5px solid rgba(87, 113, 145, 0.9);
+      opacity: .9;
+      border-right: 5px solid rgba(0, 0, 0, 0);
+      border-left: 5px solid rgba(0, 0, 0, 0);
+      box-shadow: 0 0 35px #577191;
+      -moz-animation: spinPulse 1s infinite ease-in-out;
+      -webkit-animation: spinPulse 1s infinite linear;
+    }
+    .splash-screen-circle-inner {
+      z-index: 20001;
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      margin-top: -40px;
+      margin-left: -40px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 5px solid rgba(87, 113, 145, 0.9);
+      opacity: .9;
+      border-left: 5px solid rgba(0, 0, 0, 0);
+      border-right: 5px solid rgba(0, 0, 0, 0);
+      box-shadow: 0 0 15px #577191;
+      -moz-animation: spinoffPulse 1s infinite linear;
+      -webkit-animation: spinoffPulse 1s infinite linear;
+    }
+    .splash-screen-text {
+      z-index: 20002;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin-top: -50px;
+      margin-left: -50px;
+      font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+      font-size: 13px;
+      text-align: center;
+      text-shadow: 1px 1px #cccccc;
+      vertical-align: middle;
+      color: #002951;   
+    }
+    @-moz-keyframes spinPulse {
+      0% {
+        -moz-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #577191;
+      }
+      50% {
+        -moz-transform: rotate(145deg);
+        opacity: 1;
+      }
+      100% {
+        -moz-transform: rotate(-320deg);
+        opacity: 0;
+      }
+    }
+    @-moz-keyframes spinoffPulse {
+      0% {
+        -moz-transform: rotate(0deg);
+      }
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes spinPulse {
+      0% {
+        -webkit-transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #577191;
+      }
+      50% {
+        -webkit-transform: rotate(145deg);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: rotate(-320deg);
+        opacity: 0;
+      }
+    }
+    @-webkit-keyframes spinoffPulse {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }

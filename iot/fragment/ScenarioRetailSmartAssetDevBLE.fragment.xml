@@ -1,0 +1,277 @@
+<core:FragmentDefinition height="100%"
+	xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:suite="sap.suite.ui.commons"
+	xmlns:uxap="sap.uxap"
+	xmlns:gmaps="openui5.googlemaps"
+	xmlns:mc="sap.suite.ui.microchart"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="scenarioRetailSmartAssetPageDevBLE" showHeader="true">
+		<headerContent>
+			<Toolbar class="sapUiSizeCompact">
+				<ToolbarSpacer />
+				<Title level="H4" titleStyle="H4" text="{i18n>scenario1Title}" class="sapUiSizeCompact" />
+				<ToolbarSpacer />
+			</Toolbar>
+		</headerContent>
+		<content>
+			<MessageStrip text="{i18n>scenario1Info}" showIcon="true"
+				type="Information" showCloseButton="true" customIcon="sap-icon://retail-store"
+				class="sapUiTinyMargin"></MessageStrip>
+			<!--<Title id="statusDevBLE" text="" textAlign="Center" width="100%"/>-->
+			<HBox direction="Row" justifyContent="Center" height="30%">
+				<items>
+					<Carousel class="sapUiContentPadding" loop="true"
+						pageChanged="onRetailSmartAssetChange" width="100%">
+						<pages>
+							<Image src="images/fridge-2.png" alt="Fridge" />
+							<Image src="images/trolley.png" alt="Trolley" />
+							<Image src="images/coffee.png" alt="Coffee" />
+						</pages>
+					</Carousel>
+				</items>
+			</HBox>
+			<IconTabBar id="idIconTabBarDevBLE" select="handleIconTabBarSelect"
+				class="">
+				<items>
+					<IconTabFilter icon="sap-icon://message-information" key="Info">
+						<content>
+							<Panel expandable="true" expanded="true" width="auto"
+								class="sapUiTinyMargin">
+								<headerToolbar>
+									<Toolbar height="">
+										<Title text="Scenario" />
+										<ToolbarSpacer />
+										<core:Icon id="sensorTagStreamingDevBLE"
+                                			src="sap-icon://circle-task-2"
+                                			color="#C04A4A" > <!--C04A4A / 4AC05E-->
+                                		</core:Icon>
+										<!--<Button enabled="" visible="true" icon="images/load/09.gif"/>-->
+										<Text text="Sensor" />
+										<Switch id="switchSensorDevBLE" change="onSwitch" class="sapUiTinyMargin" />
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<Text text="{i18n>scenario1InfoScenarioDescription}" />
+								</content>
+							</Panel>
+						</content>
+					</IconTabFilter>
+                    <IconTabFilter icon="sap-icon://activate" key="Activate">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="Rules" />
+                                        <ToolbarSpacer />
+                                        <Text text="Activate" />
+                                        <Switch id="switchRuleDevBLE" change="onRuleSwitch" class="sapUiTinyMargin" customTextOn="Yes" customTextOff="No"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="{i18n>scenario1InfoRulesScenarioDescription}" />
+                                    <Select width="100%" id="selectTriggerType" forceSelection="false" selectedKey="light">
+                                        <core:Item key="light" text="Light" />
+										<core:Item key="temp" text="Temperature"/>
+                                    </Select>
+                                    <RadioButtonGroup columns="2" selectedIndex="0" width="100%"
+                                        class="sapUiTinyMarginBottom">
+                                        <buttons>
+                                            <RadioButton id="RB2-1DevBLE" text="{i18n>scenario1InfoRadio1}" />
+                                            <RadioButton id="RB2-2DevBLE" text="{i18n>scenario1InfoRadio2}"
+                                            editable="true" />
+                                        </buttons>
+                                    </RadioButtonGroup>
+                                    <Input value="50" width="20%" enabled="false" type="Text"
+                                    id="scenario1InfoScenarioRuleLimitDevBLE" />
+                                    <Slider value="20" width="80%" id="scenario1InfoScenarioRuleSliderDevBLE"
+                                    change="scenario1InfoScenarioRuleSliderChange" liveChange="scenario1InfoScenarioRuleSliderChange" />
+                                    
+                                    <VBox>
+                                        <Label design="Bold" text="{i18n>scenario1InfoInsightTitle}" labelFor="Insight" />
+                                        <TextArea id="InsightDevBLE" width="100%" placeholder="{i18n>scenario1InfoInsightPlaceholder}" value="{i18n>scenario1InfoInsightValue}" rows="4" />
+                                        <Label design="Bold" text="{i18n>scenario1InfoActionTitle}" labelFor="Action" />
+                                        <TextArea id="ActionDevBLE" width="100%" placeholder="{i18n>scenario1InfoActionPlaceholder}" value="{i18n>scenario1InfoActionValue}" rows="4" />
+                                    </VBox>
+                                </content>
+                            </Panel>
+                        </content>
+                    </IconTabFilter>
+					<IconTabFilter icon="sap-icon://feed" key="Stats">
+						<content>
+							<MessageStrip id="scenario1FeedMsgConnectionOnDevBLE" visible="false" text="{i18n>scenario1StatsInfoConnectionOn}"
+								showIcon="true" type="Success" showCloseButton="true"
+								class="sapUiTinyMargin">
+								<link>
+                  					<Link text="{i18n>scenario1StatsInfoLinkConnectionOn}"
+                  						press="onScenario1StatsMsgStripLinkTo"/>
+                  				</link>
+							</MessageStrip>
+							<MessageStrip id="scenario1FeedMsgConnectionOffDevBLE" visible="true" text="{i18n>scenario1StatsInfoConnectionOff}"
+								showIcon="true" type="Warning" showCloseButton="true"
+								class="sapUiTinyMargin">
+								<link>
+                  					<Link text="{i18n>scenario1StatsInfoLinkConnectionOff}"
+                  						press="onScenario1StatsMsgStripLinkTo"/>
+                  				</link>
+							</MessageStrip>
+							<Panel expandable="true" expanded="true" width="auto"
+								class="sapUiTinyMargin sapUiNoMarginBottom">
+								<headerToolbar>
+									<Toolbar height="">
+										<Title text="Sensor Data" />
+										<ToolbarSpacer />
+										<ToolbarSpacer />
+										<Button id="btnScenario1StatsInfoConnectionOffDevBLE" visible="true" icon="sap-icon://disconnected" type="Reject" text="" enabled="false"/>
+										<Button id="btnScenario1StatsInfoConnectionOnDevBLE" visible="false" icon="sap-icon://connected" type="Accept" text="" enabled="false"/>
+									</Toolbar>
+								</headerToolbar>
+								<infoToolbar>
+								    <Toolbar height="" class="sapUiSizeCompact sapUiNoMarginBottom">
+										<SegmentedButton id="btnSCPStreamFreqDevBLE" select="onSCPStreamFreqChange" selectedKey="10s" class="sapUiSizeCompact sapUiNoMarginBottom">
+                        					<items>
+                        						<SegmentedButtonItem width="30%" text="2s" key="2s" class="sapUiSizeCompact"/>
+                        						<SegmentedButtonItem width="30%" text="5s" key="5s" class="sapUiSizeCompact"/>
+                        						<SegmentedButtonItem width="40%" text="10s" key="10s" class="sapUiSizeCompact"/>
+                        					</items>
+                        				</SegmentedButton>
+										<ToolbarSpacer />
+										<Title text="Stream to SCP" class="sapUiSizeCompact"/>
+										<Switch id="switchSCPStreamDevBLE" change="onSCPStreamSwitch" class="sapUiSizeCompact" customTextOn="Yes" customTextOff="No"/>
+									</Toolbar>
+								</infoToolbar>
+								<content>
+									
+								</content>
+							</Panel>
+							<HBox direction="Row" justifyContent="Center" width="100%">
+								<items>
+									<GenericTile id="moveTileDevBLE" header="Movement"
+								frameType="TwoByOne" headerImage="sap-icon://chart-axis"
+								press="" class="sapUiTinyMargin sapUiNoMarginEnd" state="Loading">
+										<tileContent>
+											<TileContent footer="Accelerometer Sensor">
+												<content>
+													<mc:ComparisonMicroChart size="M"
+												scale="" class="" press="" width="100%"
+												colorPalette="sapUiChartPaletteQualitativeHue1, sapUiChartPaletteQualitativeHue2, sapUiChartPaletteQualitativeHue3,
+                                                sapUiChartPaletteQualitativeHue4, sapUiChartPaletteQualitativeHue5, sapUiChartPaletteQualitativeHue6, sapUiChartPaletteQualitativeHue7,
+                                                sapUiChartPaletteQualitativeHue8, sapUiChartPaletteQualitativeHue9, sapUiChartPaletteQualitativeHue10, sapUiChartPaletteQualitativeHue11">
+														<mc:data>
+															<mc:ComparisonMicroChartData
+														id="xTileDevBLE" title="X-axis" value="0" />
+															<mc:ComparisonMicroChartData
+														id="yTileDevBLE" title="Y-axis" value="0" />
+															<mc:ComparisonMicroChartData
+														id="zTileDevBLE" title="Z-axis" value="0" />
+														</mc:data>
+													</mc:ComparisonMicroChart>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</items>
+							</HBox>
+							<HBox direction="Row" justifyContent="Center" width="100%">
+								<items>
+									<GenericTile header="Thing" subheader="Position"
+								id="posTileDevBLE" headerImage="sap-icon://move" class="sapUiTinyMargin sapUiNoMarginEnd"
+								state="Loading">
+										<TileContent unit="Facing" footer="">
+											<ImageContent id="posNumDevBLE" src="" />
+										</TileContent>
+									</GenericTile>
+									<GenericTile header="Light" subheader="Intensity"
+								id="luxTileDevBLE" headerImage="sap-icon://photo-voltaic" class="sapUiTinyMargin sapUiNoMarginEnd"
+								state="Loading">
+										<TileContent unit="Lux" footer="">
+											<NumericContent id="luxNumDevBLE" scale="lx" value="" />
+										</TileContent>
+									</GenericTile>
+								</items>
+							</HBox>
+							<HBox direction="Row" justifyContent="Center" width="100%">
+								<items>
+									<GenericTile header="Temperature" subheader="°C"
+								id="tempTileDevBLE" headerImage="sap-icon://move" class="sapUiTinyMargin sapUiNoMarginEnd"
+								state="Loading">
+										<TileContent unit="Degree Celsius" footer="">
+											<NumericContent id="tempNumDevBLE" scale="°C" value=""/>
+										</TileContent>
+									</GenericTile>
+									<GenericTile header="Humidity" subheader="%RH"
+								id="humidTileDevBLE" headerImage="sap-icon://weather-proofing" class="sapUiTinyMargin sapUiNoMarginEnd"
+								state="Loading">
+										<TileContent unit="Relative Humidity" footer="">
+											<NumericContent id="humidNumDevBLE" scale="%RH" value=""/>
+										</TileContent>
+									</GenericTile>
+								</items>
+							</HBox>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://locate-me" text="" key="Location">
+						<content>
+							<Panel expandable="true" expanded="true" width="auto"
+								class="sapUiTinyMargin">
+								<headerToolbar>
+									<Toolbar height="">
+										<Title text="Location" />
+										<ToolbarSpacer />
+										<ToolbarSpacer />
+										<Button icon="sap-icon://locate-me" press="onScenario1MapLocationStart"/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<gmaps:Map id="scenario1LocationMap" height="400px" zoom="15" lat="41.913535"
+								lng="-87.654229" apiKey="AIzaSyD6EmAk92gaGzjYVYU-ebd_BK-rgejSoZ0">
+										<gmaps:markers>
+											<gmaps:Marker id="scenario1LocationMarker" lat="41.913535" lng="-87.654229"
+										info="Supermarket" icon="images/map.png"></gmaps:Marker>
+										</gmaps:markers>
+									</gmaps:Map>
+								</content>
+							</Panel>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="scenario1AlertTab" icon="sap-icon://alert"
+						count="0" text="" key="Alerts">
+						<content>
+							<NotificationListGroup class="sapUiSizeCompact" id="alertSensorRemedyGroupDevBLE" title="Recommended Actions"
+								showCloseButton="false" authorName="User" collapsed="true"
+								authorPicture="sap-icon://person-placeholder" close="onItemClose">
+								<items>
+									
+								</items>
+							</NotificationListGroup>
+							
+							<NotificationListGroup class="sapUiSizeCompact" id="alertSensorActivityGroupDevBLE" title="Activity Logs"
+								showCloseButton="false" authorName="SAP Business One / ByDesign / IoT" collapsed="true"
+								authorPicture="sap-icon://physical-activity" close="onItemClose">
+								<items>
+									
+								</items>
+							</NotificationListGroup>
+							
+							<NotificationListGroup class="sapUiSizeCompact" id="alertSensorLogGroupDevBLE" title="Technical Logs"
+								showCloseButton="false" authorName="SensorTag CC2650STK" collapsed="true"
+								authorPicture="sap-icon://tag" close="onItemClose">
+								<items>
+								<NotificationListItem title="Device detected"
+										description="SensorTag CC2650STK" showCloseButton="false"
+										/>
+								</items>
+							</NotificationListGroup>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+		</footer>
+	</Page>
+</core:FragmentDefinition>

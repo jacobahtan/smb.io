@@ -1,0 +1,41 @@
+<core:FragmentDefinition height="100%"
+    xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m"
+    xmlns:suite="sap.suite.ui.commons" xmlns:uxap="sap.uxap" xmlns:f="sap.f"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page id="HomePageDevBLE" showHeader="false" class="sapUiTinyMargin">
+        <content>
+            <ObjectHeader class="sapUiNoMarginTop sapUiNoMarginBottom"
+                icon="sap-icon://globe"
+                title="Connected Things">
+            </ObjectHeader>
+            
+            <FlexBox justifyContent="Center" alignItems="Center"
+                direction="Column" class="sapUiNoMarginTop">
+                <items>
+                    <f:Avatar
+                        class="sapUiSizeCompact"
+                        src="images/load/iot-4.png"
+                        customDisplaySize="15rem"
+                        displayShape="Square"
+                        displaySize="Custom">
+                    </f:Avatar>
+                </items>
+            </FlexBox>
+            
+            <Text
+            class="sapUiSmallMargin sapUiNoMarginTop"
+            renderWhitespace="false"
+            wrapping="true"
+            text="Connected Things is an IoT app, showcasing typical IoT scenarios that is relevant for SMBs customer, applied to various industry-specific scenarios."/>
+            <Text
+            class="sapUiSmallMargin sapUiNoMarginTop"
+            renderWhitespace="false"
+            wrapping="true"
+            text="You will use your Phone's bluetooth connecting to the SensorTag CC2650STK to showcase the scenarios. Sensor data will then be streamed to SAP Cloud Platform from your phone (gateway), and communicates with SAP Business One and SAP Business ByDesign taking insights to actions for the relevant user."/>
+        </content>
+        <footer>
+
+        </footer>
+    </Page>
+</core:FragmentDefinition>

@@ -1,0 +1,216 @@
+<core:FragmentDefinition height="100%"
+    xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m">
+    <Page id="configPageDevBLE" showHeader="false">
+        <content>
+            
+            <Panel expandable="true" expanded="true" width="auto"
+                class="sapUiTinyMargin">
+                <headerToolbar>
+                    <Toolbar height="">
+                        <Title text="Configuration" />
+                        <ToolbarSpacer />
+                        <ToolbarSeparator />
+                        <Button id="btnConfigSaveDevBLE" type="Emphasized" press="onConfigSaveDevBLE" icon="sap-icon://save"/>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Text text="{i18n>configOverviewNoteDevBLE}" />
+                </content>
+            </Panel>
+            
+            <IconTabBar id="idIconTabBarConfig" select=""
+                class="">
+                <items>
+                    <IconTabFilter icon="sap-icon://business-one" count="" text="B1" key="Info">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="SAP Business One" />
+                                        <ToolbarSpacer />
+                                        <Button visible="false" id="btnConfigSBOSLTestDevBLE" press="onConfigSBOSLTest" icon="sap-icon://connected"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Enter your SAP Business One Service Layer and user credentials."/>
+                                </content>
+                            </Panel>
+                            <VBox class="sapUiSmallMargin">
+                                <Label design="Bold" text="{i18n>configB1SLURLTitleDevBLE}" labelFor="ConfigSLURLDevBLE" />
+                                <TextArea rows="2" width="100%" required="true" id="ConfigSLURLDevBLE"
+                                placeholder="{i18n>configB1SLURLPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configB1SLCOYTitleDevBLE}" labelFor="ConfigSLCOYDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigSLCOYDevBLE"
+                                placeholder="{i18n>configB1SLCOYPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configB1SLUSERTitleDevBLE}" labelFor="ConfigSLUSERDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigSLUSERDevBLE"
+                                placeholder="{i18n>configB1SLUSERPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configB1SLPASSWORDTitleDevBLE}" labelFor="ConfigSLPASSWORDDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigSLPASSWORDDevBLE" type="Password"
+                                placeholder="{i18n>configB1SLPASSWORDPlaceholderDevBLE}" value="" />
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://business-by-design" count="" text="ByD" key="Info">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="SAP Business ByDesign" />
+                                        <ToolbarSpacer />
+                                        <Button visible="false" id="btnConfigSByDTestDevBLE" press="onConfigSByDTest" icon="sap-icon://connected"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Enter your SAP Business ByDesign Web Service user credentials. Scenario will create a Service Request in ByD via Inbound Service ManageServiceRequestIn_V1"/>
+                                </content>
+                            </Panel>
+                            <VBox class="sapUiSmallMargin">
+                                <Label design="Bold" text="{i18n>configByDURLTitleDevBLE}" labelFor="ConfigByDURLDevBLE" />
+                                <TextArea rows="3" width="100%" required="true" id="ConfigByDURLDevBLE"
+                                placeholder="{i18n>configByDURLPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configByDUSERTitleDevBLE}" labelFor="ConfigByDUSERDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigByDUSERDevBLE"
+                                placeholder="{i18n>configByDUSERPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configByDPASSWORDTitleDevBLE}" labelFor="ConfigByDPASSWORDDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigByDPASSWORDDevBLE" type="Password"
+                                placeholder="{i18n>configByDPASSWORDPlaceholderDevBLE}" value="" />
+                                <Label design="Bold" text="{i18n>configByDDefaultBPTitleDevBLE}" labelFor="ConfigByDDefaultBPDevBLE" />
+                                <Input required="true" liveChange="" id="ConfigByDDefaultBPDevBLE"
+                                placeholder="{i18n>configByDDefaultBPPlaceholderDevBLE}" value="" />
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://example" count="" text="IoT 2.0" key="Info" enabled="true">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="SAP Cloud Platform IoT 2.0" />
+                                        <ToolbarSpacer />
+                                        <Button icon="sap-icon://sys-help" press="onSCPIOTHelpDevBLE"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Enter your SAP Cloud Platform (Neo), IoT 2.0 Service credentials into the provided form to seamlessly stream your sensor data in real-time. Note: This service has been deprecated from SAP Cloud Platform and no longer will be available for new SCP Accounts."/>
+                                </content>
+                            </Panel>
+                            <VBox class="sapUiSmallMargin">
+                                <Label design="Bold" text="{i18n>configSCPIOTURLTitleDevBLE}" labelFor="configSCPIOTURLDevBLE" />
+                                <TextArea rows="4" width="100%" required="true" id="configSCPIOTURLDevBLE"
+                                placeholder="{i18n>configSCPIOTURLPlaceholderDevBLE}" value="" />
+                                
+                                <Label design="Bold" text="{i18n>configSCPIOTBEARERTitleDevBLE}" labelFor="configSCPIOTBEARERDevBLE" />
+                                <Input required="true" liveChange="" id="configSCPIOTBEARERDevBLE"
+                                placeholder="{i18n>configSCPIOTBEARERPlaceholderDevBLE}" value="" />
+                                
+                                <Label design="Bold" text="{i18n>configSCPIOTMSGTYPETitleDevBLE}" labelFor="configSCPIOTMSGTYPEDevBLE" />
+                                <Input required="true" liveChange="" id="configSCPIOTMSGTYPEDevBLE"
+                                placeholder="{i18n>configSCPIOTMSGTYPEPlaceholderDevBLE}" value="" />
+                                
+                                <Label design="Bold" text="{i18n>configSCPIOTCONTENTTYPETitleDevBLE}" labelFor="configSCPIOTCONTENTTYPEDevBLE" />
+                                <Input required="false" enabled="false" liveChange="" id="configSCPIOTCONTENTTYPEDevBLE"
+                                placeholder="{i18n>configSCPIOTCONTENTTYPEPlaceholderDevBLE}" value="{i18n>configSCPIOTCONTENTTYPEValueDevBLE}" />
+                                
+                                <Label design="Bold" text="{i18n>configSCPIOTMODETitleDevBLE}" labelFor="configSCPIOTMODEDevBLE" />
+                                <Input required="false" enabled="false" liveChange="" id="configSCPIOTMODEDevBLE"
+                                placeholder="{i18n>configSCPIOTMODEPlaceholderDevBLE}" value="{i18n>configSCPIOTMODEValueDevBLE}" />
+                                
+                                <Label design="Bold" text="{i18n>configSCPIOTMSGTitleDevBLE}" />
+                                <TextArea required="false" enabled="false" id="configSCPIOTMSGDevBLE" width="100%" placeholder="{i18n>configSCPIOTMSGPlaceholderDevBLE}" value="{i18n>configSCPIOTMSGValueDevBLE}" rows="4" />
+                                
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://example" count="" text="IoT 4.0" key="Info2" enabled="true">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="SAP Leonardo IoT 4.0" />
+                                        <ToolbarSpacer />
+                                        <Button icon="sap-icon://sys-help" press="onSCPIOT4HelpDevBLE"/>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Enter your Cloud Foundry App's URL."/>
+                                </content>
+                            </Panel>
+                            <VBox class="sapUiSmallMargin">
+                                <Label design="Bold" text="{i18n>configSCPIOT4URLTitleDevBLE}" labelFor="configSCPIOT4URLDevBLE" />
+                                <TextArea rows="4" width="100%" required="true" id="configSCPIOT4URLDevBLE"
+                                placeholder="{i18n>configSCPIOT4URLPlaceholderDevBLE}" value="" />
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://map" count="" text="GMap" key="Info">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="Google Map API Key" />
+                                        <ToolbarSpacer />
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Enter your Google Map API Key."/>
+                                </content>
+                            </Panel>
+                            <VBox class="sapUiSmallMargin">
+                                <Label design="Bold" text="{i18n>configGMAPAPIKEYTitleDevBLE}" labelFor="ConfigGMAPAPIKEYDevBLE" />
+                                <TextArea rows="2" width="100%" required="true" liveChange="" id="ConfigGMAPAPIKEYDevBLE"
+                                placeholder="{i18n>configGMAPAPIKEYPlaceholderDevBLE}" value="{i18n>configGMAPAPIKEYValueDevBLE}" />
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://add-equipment" count="" text="Sensor" key="Troubleshoot">
+                        <content>
+                            <Panel expandable="true" expanded="true" width="auto"
+                                class="sapUiTinyMargin">
+                                <headerToolbar>
+                                    <Toolbar height="">
+                                        <Title text="SensorTag CC2650STK" />
+                                        <ToolbarSpacer />
+                                    </Toolbar>
+                                </headerToolbar>
+                                <content>
+                                    <Text text="Troubleshooting tool for SensorTag to test sensors capabilities."/>
+                                </content>
+                            </Panel>
+                            <VBox direction="Column" justifyContent="Center" width="100%">
+                                <items>
+                                    <HBox direction="Row" justifyContent="Center" width="100%" class="sapUiTinyMargin">
+                                        <items>
+                                            <Button class="sapUiTinyMargin" type="Reject" text="" width="70px" id="btnLedRed"
+                                            press="onBtnLedRed" icon="sap-icon://lightbulb" />
+                                            <Button class="sapUiTinyMargin" type="Accept" text="" width="70px" id="btnLedGreen"
+                                            press="onBtnLedGreen" icon="sap-icon://lightbulb" />
+                                            <Button class="sapUiTinyMargin" text="" width="70px" id="btnBuzzer" press="onBtnBuzzer"
+                                            icon="sap-icon://sound-loud" />
+                                            <Button class="sapUiTinyMargin" text="" width="70px" id="btnOff" press="onBtnOff"
+                                            icon="sap-icon://log" />
+                                        </items>
+                                    </HBox>
+                                </items>
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+            
+        </content>
+        <footer>
+            <!--<Toolbar>
+             <ToolbarSpacer />
+             <Button icon="sap-icon://duplicate" type="Emphasized"
+             text="{i18n>wizImportButton}" press="onWizardUploadOptionPress"></Button>
+             </Toolbar>-->
+        </footer>
+    </Page>
+</core:FragmentDefinition>

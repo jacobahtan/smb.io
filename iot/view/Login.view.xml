@@ -1,0 +1,87 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.f"
+    xmlns="sap.m" controllerName="jt.resolute.iot.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml">
+    
+    <Carousel id="crsOnboard" class="sapUiContentPadding" height="100%">
+        <pages>
+            <FlexBox id="crsOnboardPg1DevBLE" justifyContent="Center" alignItems="Center"
+                direction="Column" class="sapUiTinyMargin" wrap="Wrap" fitContainer="true">
+                <items>
+                    <Text></Text>
+                    <FormattedText htmlText="{i18n>landP1Title}"/>
+                    <Text></Text>
+                    <Text text="Connect your Things with SAP."></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/load/05.gif"
+                        customDisplaySize="14rem"
+                        displayShape="Circle"
+                        displaySize="Custom">
+                    </f:Avatar>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/swipe2.gif"
+                        customDisplaySize="2rem"
+                        displayShape="Circle"
+                        displaySize="Custom">
+                    </f:Avatar>
+                </items>
+            </FlexBox>
+            <FlexBox justifyContent="Center" alignItems="Center"
+                direction="Column" class="sapUiTinyMargin" wrap="Wrap" fitContainer="true">
+                <items>
+                    <Text></Text>
+                    <FormattedText htmlText="{i18n>landP2Title}"/>
+                    <Text></Text>
+                    <Text text="Get Ready your SensorTag."></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/load/iot-4.png"
+                        customDisplaySize="14rem"
+                        displayShape="Square"
+                        displaySize="Custom">
+                    </f:Avatar>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/swipe2.gif"
+                        customDisplaySize="2rem"
+                        displayShape="Circle"
+                        displaySize="Custom">
+                    </f:Avatar>
+                </items>
+            </FlexBox>
+            <FlexBox width="100%" class="sapUiTinyMargin" alignItems="Center" justifyContent="Center" direction="Column" >
+                <items>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/load/04.gif"
+                        customDisplaySize="14rem"
+                        displayShape="Square"
+                        displaySize="Custom">
+                    </f:Avatar>
+                    <Text></Text>
+                    <f:Avatar
+                        src="images/load/02.gif"
+                        customDisplaySize="2rem"
+                        displayShape="Circle"
+                        displaySize="Custom">
+                    </f:Avatar>
+                    <!--<Button id="btnWebBLE" icon="" text="Web BLE" type="Emphasized" press="onWebBLE" ></Button>-->
+                    <Button id="btnDevBLE" icon="" width="300px" text="Let's Get Started!" type="Emphasized" press="onDevBLE" ></Button>
+                </items>
+            </FlexBox>
+        </pages>
+    </Carousel>
+</mvc:View>

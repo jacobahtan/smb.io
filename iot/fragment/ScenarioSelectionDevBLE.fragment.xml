@@ -1,0 +1,93 @@
+<core:FragmentDefinition height="100%"
+    xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:tnt="sap.tnt"
+    xmlns:suite="sap.suite.ui.commons" xmlns:uxap="sap.uxap"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page id="scenarioSelectionPageDevBLE" showHeader="false" class="">
+        <content>
+            <Panel expandable="true" expanded="true" width="auto"
+                class="sapUiTinyMargin">
+                <headerToolbar>
+                    <Toolbar height="">
+                        <Title text="Scenarios" />
+                        <ToolbarSpacer />
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Text text="List of IoT Scenarios for you to choose from. More coming soon. Stay tuned." />
+                </content>
+            </Panel>
+            
+            <Panel expandable="true" expanded="false" width="auto"
+                >
+                <headerToolbar>
+                    <Toolbar height="" class="sapUiSizeCompact">
+                        <core:Icon
+                            src="sap-icon://supplier"
+                            class="size1"
+                            color="#031E48" >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                        <Text text="My Scenario"/>
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Text text="Coming soon..." />
+                </content>
+            </Panel>
+            
+            <Panel expandable="true" expanded="false" width="auto"
+                >
+                <headerToolbar>
+                    <Toolbar height="" class="sapUiSizeCompact">
+                        <core:Icon
+                            src="sap-icon://retail-store"
+                            class="size1"
+                            color="#031E48" >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                        <Text text="Digitalized Retail" class="size1"/>
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <tnt:NavigationList itemSelect="onScenarioToRetailAssetPressDevBLE" expanded="true">
+                        <tnt:NavigationListItem text="Connected Assets" icon="sap-icon://tag"/>
+                    </tnt:NavigationList>
+                </content>
+            </Panel>
+            
+            <Panel expandable="true" expanded="false" width="auto"
+                >
+                <headerToolbar>
+                    <Toolbar height="" class="sapUiSizeCompact">
+                        <core:Icon
+                            src="sap-icon://factory"
+                            class="size1"
+                            color="#031E48" >
+                            <core:layoutData>
+                                <FlexItemData growFactor="1" />
+                            </core:layoutData>
+                        </core:Icon>
+                        <Text text="Digitized Manufacturing"/>
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Text text="Coming soon..." />
+                </content>
+            </Panel>
+        </content>
+        <footer>
+            <!-- <Bar> <contentRight> <Button text="Confirm" type="Accept" press="handleWizardSubmit"></Button>
+             <Button text="Cancel" type="Reject" press="handleWizardCancel"></Button>
+             </contentRight> </Bar> -->
+        </footer>
+    </Page>
+</core:FragmentDefinition>

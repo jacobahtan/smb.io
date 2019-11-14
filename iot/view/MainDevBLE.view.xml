@@ -1,0 +1,54 @@
+<core:View height="100%"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:table="sap.ui.table"
+    controllerName="jt.resolute.iot.controller.MainDevBLE">
+    <tnt:ToolPage id="toolPageDevBLE">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button id="sideNavigationToggleButtonDevBLE" icon="sap-icon://menu2"
+                    type="Transparent" press="onSideNavButtonPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+                <tnt:ToolHeaderUtilitySeparator />
+                <Title text="SMB IoT"/>
+                <ToolbarSpacer></ToolbarSpacer>
+                <Image id="oBrandLogoDevBLE" class="sapUiSmallMargin" src="images/iot/IOT-2.png" height="80%"
+                    press="onBrandLogoPressDevBLE"></Image>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation expanded="false" itemSelect="onItemSelect" class="">
+                <tnt:NavigationList id="fixedNavListMainDevBLE">
+                    <tnt:NavigationListItem text="{i18n>appMainNavHome}" icon="sap-icon://home"
+                        enabled="true" expanded="true" key="Home"></tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="{i18n>appMainNavScenario}" icon="sap-icon://idea-wall"
+                        enabled="true" expanded="true" key="Scenario">
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="{i18n>appMainNavConfig}" icon="sap-icon://customize"
+                        enabled="true" expanded="true" key="Configuration"></tnt:NavigationListItem>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList>
+                        <tnt:NavigationListItem text="{i18n>appFixedNavContact}"
+                            icon="sap-icon://headset"></tnt:NavigationListItem>
+                        <tnt:NavigationListItem text="{i18n>appFixedNavHelp}"
+                            icon="sap-icon://learning-assistant"></tnt:NavigationListItem>
+                        <tnt:NavigationListItem text="{i18n>appFixedNavAbout}"
+                            icon="sap-icon://sys-help"></tnt:NavigationListItem>
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer id="pageContainerDevBLE">
+                <pages></pages>
+            </NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</core:View>

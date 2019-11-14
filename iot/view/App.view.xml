@@ -1,0 +1,20 @@
+<mvc:View
+	controllerName="jt.resolute.iot.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns:u="sap.ui.unified" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:uxap="sap.uxap" xmlns:table="sap.ui.table"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	displayBlock="true">
+	<App id="app">
+		<pages>
+			<Page>
+				<content>
+					<Button text="{i18n>iWantToNavigate}" class="sapUiTinyMarginEnd"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
