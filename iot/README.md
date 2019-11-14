@@ -21,7 +21,7 @@ From the mobile phone, you have the option to configure an IoT platform (SAP Clo
 Make sure you have completed the prerequisite before applying the following steps.
 1. Download the contents in this page's folder (/smb.io/iot).
 
-2. Prepare a cordova package to your own namespace identifier using terminal / command prompt.
+2. Prepare a Cordova package to your own namespace identifier using terminal / command prompt.
 > Syntax as follows:
 ```sh
 cordova create <folder-name> <namespace-identifier-of-your-app> <app-name-or-project-name>
@@ -34,25 +34,25 @@ $ cordova create smbhybridappsmbiot sap.smbhybridappsmbiot SMBHybridAppSMBIoT
 3. Copy & paste the contents in the web app package into the cordova app's www folder & replace contents.
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-6.png)
 
-4. Download the plugins.
+4. Add the plugins into your Cordova App.
 ```sh
 $ cordova plugin add cordova-plugin-geolocation cordova-plugin-ble cordova-plugin-dialogs cordova-plugin-document-viewer cordova-plugin-inappbrowser cordova-plugin-device
 ```
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-7.png)
 
-5. Run Cordova commands to add device.
+5. Add device of your choice into your Cordova App.
 ```sh
 $ cordova platform add ios
 $ cordova platform add android
 ```
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-4.png)
 
-6. Open your project in either OS dependent IDE.
+6. Open the iOS / Android project.
 <br>For iOS, open the .xcodeproj extension in the ios folder.
-<br>![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
 <br>
 <br>For Android, Open Android Studio, Open Existing Android Project, Select the android folder.
-<br>![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
 <br>
 7. Run the project in the IDE.
 
