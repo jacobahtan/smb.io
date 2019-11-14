@@ -27,17 +27,32 @@ From the mobile phone, you have the option to configure an IoT platform (SAP Clo
 
 Make sure you have completed the prerequisite before applying the following steps.
 1. Git clone or download this SAPUI5 web app package (smb.io/iot).
-2. Prepare a cordova package to your own namespace identifier.
-cordova create <folder-name> <namespace-identifier-of-your-app> <app-name-or-project-name>
+2. Prepare a cordova package to your own namespace identifier using terminal / command prompt.
 ```sh
-$ cordova create smbhybridapphelloworld sap.smbhybridapphelloworld SMBHybridAppHelloWorld
+Syntax as follows:
+$ cordova create <folder-name> <namespace-identifier-of-your-app> <app-name-or-project-name>
+```
+```sh
+$ cordova create smbhybridappsmbiot sap.smbhybridappsmbiot SMBHybridAppSMBIoT
 ```
 ![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-1.png)
-![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-2.png)
-3. Copy & paste the contents in the web app package into the cordova folder.
+3. Copy & paste the contents in the web app package into the cordova app's www folder & replace contents.
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-6.png)
 4. Download the plugins.
+```sh
+$ cordova plugin add cordova-plugin-geolocation cordova-plugin-ble cordova-plugin-dialogs cordova-plugin-document-viewer cordova-plugin-inappbrowser cordova-plugin-device
+```
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-7.png)
 5. Run Cordova commands to add device.
+```sh
+$ cordova platform add ios
+$ cordova platform add android
+```
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-4.png)
 6. Open your project in either OS dependent IDE.
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-8.png)
+![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-9.png)
+
 7. Run the project.
 
 ## References
