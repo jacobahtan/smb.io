@@ -2,23 +2,23 @@
 An IoT app that uses bluetooth (BLE) to connect the SensorTag and stream sensor data (Accelerometer, Luxometer, Humidity & Temperature).
 With the sensor data, you can configure your ERP system (SAP Business One / SAP Business ByDesign) to get triggers.
 
-In this solution, you will be guided on how to deploy it in your device (iOS / Android).
-We will be using Cordova to package this web application and build it for mobile device.
+In this repository, you will be guided on how to deploy it in your device (iOS / Android).
+You will be using Cordova to package this web application and build it for mobile device.
 What you need is a mobile device and a SensorTag.
 Optionally, you may acquire SAP's IoT platform (SAP Leonardo IoT 4.0), so to collect the IoT Sensor Data.
-If not, the sensor data will just be streaming to your mobile device
+If not, the sensor data will just be streaming to your mobile device.
 
 ## Prerequisite
-- Hardware: CC2650STK SensorTag
+- Purchase Hardware: [Texas Instruments CC2650STK SensorTag](https://www.ti.com/tool/TIDC-CC2650STK-SENSORTAG)
 - Install [Cordova](https://cordova.apache.org/docs/en/latest/guide/cli/#installing-the-cordova-cli)
 - Install [Xcode](https://developer.apple.com/xcode/) or/and [Android Studio](https://developer.android.com/studio)
 
 ## How to use this?
-This is a SAPUI5 app that is wrapped in a Hybrid mobile application through cordova packaging tool.
+This is a SAPUI5 app that will be wrapped in a Hybrid mobile application through cordova packaging tool.
 It is using your mobile bluetooth (BLE Technology) to connect to the sensortag and starts to stream sensor data into the mobile phone.
 From the mobile phone, you have the option to configure an IoT platform (SAP Cloud Platform IoT 2.0 / Leonardo 4.0) to stream IoT data.
 
-Make sure you have completed the prerequisite before applying the following steps.
+Make sure you have completed the prerequisite before the following steps.
 1. Download the contents in this page's folder (/smb.io/iot).
 
 2. Prepare a Cordova package to your own namespace identifier using terminal / command prompt.
