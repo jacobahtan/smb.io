@@ -5,8 +5,9 @@ In this repository, you will be guided on how to deploy it in your device (iOS /
 You will be using Cordova to package this web application and build it for mobile device.
 What you need is a mobile device and a SensorTag.
 Optionally, you may acquire SAP's IoT platform (SAP Leonardo IoT 4.0), so to collect the IoT Sensor Data.
-If not, the sensor data will just be streaming to your mobile device. This is what you will achieve.
-<br><img src="https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-app.gif" width="500"></br>
+If not, the sensor data will just be streaming to your mobile device. This is what you will achieve at the end.
+<br></br>
+<br><center><img src="https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-app.gif" width="300"></img><center></br>
 
 ## Prerequisite
 - Purchase Hardware: [Texas Instruments CC2650STK SensorTag](https://www.ti.com/tool/TIDC-CC2650STK-SENSORTAG)
