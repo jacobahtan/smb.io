@@ -3,6 +3,7 @@ An IoT app that uses bluetooth (BLE) to connect the SensorTag and stream sensor 
 With the sensor data, you can configure your ERP system (SAP Business One / SAP Business ByDesign) to get triggers.
 
 <br>![](https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-app.gif | width=100)</br>
+<img src="https://github.com/jacobtan89/smb.io/blob/master/archive/media/iot-app.gif" width="100">
 
 In this repository, you will be guided on how to deploy it in your device (iOS / Android).
 You will be using Cordova to package this web application and build it for mobile device.
